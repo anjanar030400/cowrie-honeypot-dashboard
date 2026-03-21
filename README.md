@@ -43,8 +43,8 @@ The system simulates a **Security Operations Center (SOC)** workflow by detectin
 
 ## 📊 Dashboard Preview
 
-![Dashboard](screenshots/Dashboard1.png)
 ![Dashboard](screenshots/Dashboard2.png)
+![Dashboard](screenshots/Dashboard1.png)
 
 ---
 
