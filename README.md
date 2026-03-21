@@ -49,8 +49,7 @@ The system simulates a **Security Operations Center (SOC)** workflow by detectin
 
 ## 🎥 Live Attack Demo
 
-[▶️ Watch Demo](screenshots/demo.mov)
-
+[▶️ Watch Demo](https://raw.githubusercontent.com/anjanar030400/cowrie-honeypot-dashboard/main/screenshots/live_honeypot_attack_demo.mp4)
 ---
 
 ## 🛠️ Technologies Used
